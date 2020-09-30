@@ -1,0 +1,72 @@
+.lta {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  font-size: 1em;
+  font-family: Merriweather, serif;
+  padding: 5em 0 5em;
+}
+
+.lta-wrapper {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.lta-r1 {
+  padding-right: 3.5em;
+  font-size: 7em;
+  font-weight: 300;
+  line-height: 1.1em;
+  position: relative;
+}
+
+.lta-r2 {
+  font-size: 4.8em;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.lta-r3 {
+  font-size: 4.405em;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+
+.lta-source {
+  margin-top: -1em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: 300;
+  font-size: 0.12em;
+  float: right;
+  width: 24em;
+  height: 28em;
+  line-height: 27.2em;
+  border: 0.3em solid #fff;
+  text-align: center;
+}
+
+.image {
+  max-width: 90%;
+}
+
+.sobremi {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  font-size: 1em;
+  font-family: Merriweather, serif;
+  background-color: #343434;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.lta-r4 {
+  font-size: 2.5em;
+  font-weight: 300;
+  line-height: 1em;
+}

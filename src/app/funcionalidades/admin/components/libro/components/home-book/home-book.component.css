@@ -1,0 +1,79 @@
+.sdij {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  text-transform: uppercase;
+  padding-top: 7em;
+  padding-bottom: 7.5em;
+}
+
+.sdij-left {
+  color: #fff;
+  position: relative;
+  left: 3.5%;
+  background-size: cover;
+  text-transform: uppercase;
+  padding-top: 7em;
+  padding-bottom: 7.5em;
+}
+
+.sdij-r2 {
+  font-size: 5em;
+  font-weight: 200;
+  line-height: 0.8em;
+}
+
+.sdij-r1 {
+  font-size: 10em;
+  line-height: 0.9em;
+  padding-left: 0.05em;
+  font-weight: 200;
+}
+
+.sdij-r3 {
+  font-size: 3em;
+  line-height: 0.9em;
+  padding-left: 0.05em;
+  font-weight: 200;
+}
+.sdij-r4 {
+  font-size: 4em;
+  line-height: 0.9em;
+  padding-left: 0.05em;
+  font-weight: 200;
+}
+
+.definition {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  font-size: 1em;
+  font-family: Merriweather, serif;
+  background-color: #343434;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.definition-left {
+  color: #fff;
+  position: relative;
+  background-size: cover;
+  font-size: 1em;
+  font-family: Merriweather, serif;
+  background-color: #343434;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  text-transform: uppercase;
+}
+
+.imagenes {
+  max-width: 20%;
+  align-items: center;
+}
+
+.iconos {
+  position: relative;
+  left: 35%;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
