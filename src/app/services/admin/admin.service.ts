@@ -59,7 +59,7 @@ export class AdminService {
 
   modifyBook(dataBook: any) {
     return this.http
-      .put(`${this.endpoint}/updateBook/:id${dataBook._id}`, this.httOptions)
+      .post(`${this.endpoint}/updateBook/:id${dataBook._id}`, this.httOptions)
       .pipe(map(this.extractData));
   }
 

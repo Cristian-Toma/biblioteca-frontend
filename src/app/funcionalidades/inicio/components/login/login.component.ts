@@ -36,8 +36,12 @@ export class LoginComponent implements OnInit {
           } else if (res.token) {
             alert('Bienvenido ' + this.userLogin.name);
             localStorage.setItem('token', res.token);
-            localStorage.setItem('user', res.user.role);
-            this.router.navigateByUrl('adminHome');
+            localStorage.setItem('user', res.user);
+            if (res.user === 'ADMIN') {
+              this.router.navigateByUrl('adminHome');
+            } else {
+              this.router.navigateByUrl('home');
+            }
           } else {
             alert('Ha ocurrido un error desconocido');
           }
