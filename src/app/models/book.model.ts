@@ -1,0 +1,13 @@
+export class BookModel {
+  constructor(
+    public id: string,
+    public author: string,
+    public title: string,
+    public edition: string,
+    public keyWords: string,
+    public description: string,
+    public themes: string,
+    public copies: string,
+    public avaible: string
+  ) {}
+}
