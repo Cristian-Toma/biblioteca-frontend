@@ -1,0 +1,100 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark"
+  style="background-color: bl"
+>
+  <a class="navbar-brand" routerLink="adminHome">Biblioteca</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/revistasHome"
+          routerLinkActive="active"
+          >Inicio</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/saveMagazine"
+          routerLinkActive="active"
+          >Guardar revistas</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/updateMagazine"
+          routerLinkActive="active"
+          id="btn"
+          >Modificar revistas</a
+        >
+      </li>
+      <li class="nav-item" id="activo">
+        <a
+          class="nav-link"
+          id="activo"
+          href="/deleteMagazine"
+          routerLinkActive="active"
+          >Eliminar revistas</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          href="/listMagazine"
+          routerLinkActive="active"
+          >listar revistas</a
+        >
+      </li>
+      <!--<li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          href="/searchMagazine"
+          routerLinkActive="active"
+          >Buscar revistas</a
+        >
+      </li>-->
+    </ul>
+  </div>
+</nav>
+<br />
+<div id="page-content-wrapper">
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="letras">Eliminar revista</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 contact-form">
+              <form class="form-signin" (ngSubmit)="delete()">
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="id"
+                      name="id"
+                      [(ngModel)]="_id"
+                      placeholder="ID de la revista"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="col-xs-12 col-md-12 form-group">
+                  <button class="btn btn-primary pull-right" type="submit">
+                    eliminar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

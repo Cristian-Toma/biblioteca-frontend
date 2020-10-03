@@ -1,0 +1,100 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark"
+  style="background-color: bl"
+>
+  <a class="navbar-brand" routerLink="/adminHome">Biblioteca</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/userHome"
+          routerLinkActive="active"
+          >Inicio</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/saveUser"
+          routerLinkActive="active"
+          >Guardar Usuarios</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/updateUser"
+          routerLinkActive="active"
+          >Modificar Usuarios</a
+        >
+      </li>
+      <li class="nav-item" id="activo">
+        <a
+          class="nav-link"
+          id="activo"
+          routerLink="/deleteUser"
+          routerLinkActive="active"
+          >Eliminar Usuarios</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/listUser"
+          routerLinkActive="active"
+          >listar Usuarios</a
+        >
+      </li>
+      <!--<li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/searchUser"
+          routerLinkActive="active"
+          >Buscar Usuarios</a
+        >
+      </li>-->
+    </ul>
+  </div>
+</nav>
+<br />
+<div id="page-content-wrapper">
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="letras">Eliminar usuario</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 contact-form">
+              <form class="form-signin" (ngSubmit)="delete()">
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="id"
+                      name="id"
+                      [(ngModel)]="_id"
+                      placeholder="ID del usuario"
+                      type="text"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12 form-group">
+                  <button class="btn btn-primary pull-right" type="submit">
+                    eliminar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

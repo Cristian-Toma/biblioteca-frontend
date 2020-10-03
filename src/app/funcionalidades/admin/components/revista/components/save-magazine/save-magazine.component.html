@@ -1,0 +1,177 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark"
+  style="background-color: bl"
+>
+  <a class="navbar-brand" routerLink="/adminHome">Biblioteca</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" id="btn" routerLink="/revistasHome">Inicio</a>
+      </li>
+      <li class="nav-item" id="activo">
+        <a class="nav-link" id="activo" routerLink="/saveMagazine"
+          >Guardar revistas</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="btn" routerLink="/updateMagazine"
+          >Modificar revistas</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="btn" routerLink="/deleteMagazine"
+          >Eliminar revistas</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="btn" routerLink="/listMagazine"
+          >listar revistas</a
+        >
+        <!--<li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          href="/searchMagazine"
+          routerLinkActive="active"
+          >Buscar revistas</a
+        >
+      </li>-->
+      </li>
+    </ul>
+  </div>
+</nav>
+<br />
+<div id="page-content-wrapper">
+  <div class="page-content inset">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="letras">Guardar Revistas</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 contact-form">
+              <form class="form-signin" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="author"
+                      name="author"
+                      [(ngModel)]="magazine.author"
+                      placeholder="Autor de la revista"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-xs-4 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="title"
+                      name="title"
+                      [(ngModel)]="magazine.title"
+                      placeholder="Titulo de la revista"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="col-xs-4 col-md-13 form-group">
+                  <div class="controls">
+                    <input
+                      class="form-control"
+                      id="edition"
+                      name="edition"
+                      [(ngModel)]="magazine.edition"
+                      placeholder="edicion de la revista"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="keyWords"
+                      name="keyWords"
+                      [(ngModel)]="magazine.keyWords"
+                      placeholder="Palabras Clave de la revista"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-xs-6 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="themes"
+                      name="themes"
+                      [(ngModel)]="magazine.themes"
+                      placeholder="Temas de la revista"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-xs-4 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="copies"
+                      name="copies"
+                      [(ngModel)]="magazine.copies"
+                      placeholder="copias"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-xs-4 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="avaible"
+                      name="avaible"
+                      [(ngModel)]="magazine.avaible"
+                      placeholder="copias disponibles"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-xs-4 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="copies"
+                      name="copies"
+                      [(ngModel)]="magazine.actualFrecuency"
+                      placeholder="Frecuencia Actual"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-xs-4 col-md-6 form-group">
+                    <input
+                      class="form-control"
+                      id="avaible"
+                      name="avaible"
+                      [(ngModel)]="magazine.published"
+                      placeholder="publicadas"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="col-xs-4 col-md-13 form-group">
+                  <div class="controls">
+                    <textarea
+                      class="form-control"
+                      id="description"
+                      name="description"
+                      [(ngModel)]="magazine.description"
+                      placeholder="descripcion"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+                <br />
+
+                <div class="row">
+                  <div class="col-xs-12 col-md-12 form-group">
+                    <button class="btn btn-primary pull-right" type="submit">
+                      Guardar la revista
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
