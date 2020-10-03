@@ -26,6 +26,7 @@ import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.com
 import { SearchUserComponent } from './components/usuario/components/search-user/search-user.component';
 import { AdminService } from 'src/app/services/admin/admin.service';
 import { ListBookComponent } from './components/libro/components/list-book/list-book.component';
+import { ListMagazineComponent } from './components/revista/components/list-magazine/list-magazine.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ListBookComponent } from './components/libro/components/list-book/list-
     HomeBookComponent,
     HomeMagazineComponent,
     ListBookComponent,
+    ListMagazineComponent,
   ],
   imports: [
     CommonModule,

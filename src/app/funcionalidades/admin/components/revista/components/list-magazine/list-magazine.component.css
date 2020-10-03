@@ -1,0 +1,22 @@
+.listado {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0.2%;
+  max-width: 90%;
+  position: relative;
+  left: 3.5%;
+  margin: 1.5em;
+}
+
+#datos {
+  position: relative;
+  left: 2%;
+  padding: 0.1%;
+  margin: 0.5%;
+}
+
+hr {
+  background-color: rgb(128, 128, 128);
+  max-width: 80%;
+  align-content: left;
+}

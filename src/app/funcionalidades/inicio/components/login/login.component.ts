@@ -11,11 +11,7 @@ import { AdminService } from 'src/app/services/admin/admin.service';
 export class LoginComponent implements OnInit {
   userLogin;
 
-  constructor(
-    private rest: UserService,
-    private rst: AdminService,
-    private router: Router
-  ) {
+  constructor(private rest: AdminService, private router: Router) {
     this.userLogin = {
       carnetCui: '',
       name: '',
