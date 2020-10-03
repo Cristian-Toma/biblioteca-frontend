@@ -24,24 +24,10 @@
       <li class="nav-item" id="activo">
         <a class="nav-link" id="activo" href="/listMagazine">listar revistas</a>
       </li>
-      <!--<li class="nav-item">
-        <a
-          class="nav-link"
-          id="btn"
-          href="/searchMagazine"
-          routerLinkActive="active"
-          >Buscar revistas</a
-        >
-      </li>-->
+      <li class="nav-item">
+        <a class="nav-link" id="btn" href="/searchMagazine">Buscar revistas</a>
+      </li>
     </ul>
   </div>
 </nav>
-<br />
-<ul>
-  <div class="listado" *ngFor="let magazine of magazines">
-    <h1 id="datos">ID: {{ magazine._id }}</h1>
-    <hr id="datos" />
-    <p id="datos">Titulo: {{ magazine.title }}</p>
-    <p id="datos">Autor: {{ magazine.author }}</p>
-  </div>
-</ul>
+<p>list-magazine works!</p>

@@ -1,6 +1,6 @@
 export class BookModel {
   constructor(
-    public _id: string,
+    public id: string,
     public author: string,
     public title: string,
     public edition: string,

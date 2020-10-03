@@ -23,19 +23,13 @@
             >listar Libro</a
           >
         </li>
-        <!--<li class="nav-item">
-          <a class="nav-link" id="btn" routerLink="/searchBook">Buscar Libro</a>
-        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" id="btn" href="/searchBook">Buscar Libro</a>
+        </li>
       </ul>
     </div>
   </nav>
-  <br />
   <ul>
-    <div class="listado" *ngFor="let book of books">
-      <h1 id="datos">ID: {{ book._id }}</h1>
-      <hr id="datos" />
-      <p id="datos">Titulo: {{ book.title }}</p>
-      <p id="datos">Autor: {{ book.author }}</p>
-    </div>
+    <!--  <li *ngFor="let book of books">{{ book.name }}</li>-->
   </ul>
 </div>

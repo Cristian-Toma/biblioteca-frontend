@@ -10,27 +10,15 @@ import { AdminService } from 'src/app/services/admin/admin.service';
 })
 export class UpdateBookComponent implements OnInit {
   book: BookModel;
-  constructor(private rest: AdminService, private router: Router) {}
-
-  ngOnInit(): void {
+  constructor(private rest: AdminService, private router: Router) {
     this.book = new BookModel('', '', '', '', '', '', '', '', '');
   }
 
-  getToUpdate() {
-    let data = {};
-
-    for (const prop in this.book) {
-      if (this.book[prop] !== '') {
-        data[prop] = this.book[prop];
-      }
-    }
-
-    return data;
-  }
+  ngOnInit(): void {}
 
   editBooks() {
     if (this.rest.isAdminLogged()) {
-      this.rest.modifyBook(this.getToUpdate()).subscribe((res: any) => {
+      this.rest.modifyBook(this.book).subscribe((res: any) => {
         if (res) {
           alert('libro modificado');
         }
