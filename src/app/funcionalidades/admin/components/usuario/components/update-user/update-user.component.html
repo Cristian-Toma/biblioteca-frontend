@@ -50,7 +50,7 @@
           >listar Usuarios</a
         >
       </li>
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a
           class="nav-link"
           id="btn"
@@ -58,7 +58,7 @@
           routerLinkActive="active"
           >Buscar Usuarios</a
         >
-      </li>
+      </li>-->
     </ul>
   </div>
 </nav>
@@ -71,7 +71,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8 contact-form">
-              <form class="form-signin">
+              <form class="form-signin" (ngSubmit)="editUser()">
                 <div class="row">
                   <div class="col-xs-6 col-md-6 form-group">
                     <input
@@ -79,6 +79,7 @@
                       id="id"
                       name="id"
                       placeholder="ID del usuario"
+                      [(ngModel)]="user._id"
                       type="text"
                     />
                   </div>
@@ -87,8 +88,8 @@
                   <div class="col-xs-6 col-md-6 form-group">
                     <input
                       class="form-control"
-                      id="carnetCui"
                       name="carnetCui"
+                      [(ngModel)]="user.carnetCui"
                       placeholder="Carnet o CUI"
                       type="text"
                     />
@@ -96,8 +97,8 @@
                   <div class="col-xs-6 col-md-6 form-group">
                     <input
                       class="form-control"
-                      id="name"
                       name="name"
+                      [(ngModel)]="user.name"
                       placeholder="Nombre"
                       type="text"
                     />
@@ -105,8 +106,8 @@
                   <div class="col-xs-6 col-md-6 form-group">
                     <input
                       class="form-control"
-                      id="lastname"
                       name="lastname"
+                      [(ngModel)]="user.lastname"
                       placeholder="apellido"
                       type="text"
                     />
@@ -114,10 +115,10 @@
                   <div class="col-xs-6 col-md-6 form-group">
                     <input
                       class="form-control"
-                      id="password"
                       name="password"
+                      [(ngModel)]="user.password"
                       placeholder="contraseña"
-                      type="password"
+                      type="text"
                     />
                   </div>
                 </div>

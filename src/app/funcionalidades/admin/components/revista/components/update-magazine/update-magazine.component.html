@@ -2,7 +2,7 @@
   class="navbar navbar-expand-lg navbar-dark bg-dark"
   style="background-color: bl"
 >
-  <a class="navbar-brand" routerLink="adminHome">Biblioteca</a>
+  <a class="navbar-brand" routerLink="/adminHome">Biblioteca</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -28,11 +28,15 @@
           >listar revistas</a
         >
       </li>
-      <li class="nav-item">
-        <a class="nav-link" id="btn" routerLink="/searchMagazine"
+      <!--<li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          href="/searchMagazine"
+          routerLinkActive="active"
           >Buscar revistas</a
         >
-      </li>
+      </li>-->
     </ul>
   </div>
 </nav>
@@ -45,13 +49,14 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8 contact-form">
-              <form class="form-signin">
+              <form class="form-signin" (ngSubmit)="editMagazine()">
                 <div class="row">
                   <div class="col-xs-6 col-md-6 form-group">
                     <input
                       class="form-control"
                       id="id"
                       name="id"
+                      [(ngModel)]="magazine._id"
                       placeholder="id de la revista"
                       type="text"
                     />
@@ -63,6 +68,7 @@
                       class="form-control"
                       id="author"
                       name="author"
+                      [(ngModel)]="magazine.author"
                       placeholder="Autor de la revista"
                       type="text"
                     />
@@ -72,6 +78,7 @@
                       class="form-control"
                       id="title"
                       name="title"
+                      [(ngModel)]="magazine.title"
                       placeholder="Titulo de la revista"
                       type="text"
                     />
@@ -83,6 +90,7 @@
                       class="form-control"
                       id="edition"
                       name="edition"
+                      [(ngModel)]="magazine.edition"
                       placeholder="edicion de la revista"
                       type="text"
                     />
@@ -94,6 +102,7 @@
                       class="form-control"
                       id="keyWords"
                       name="keyWords"
+                      [(ngModel)]="magazine.keyWords"
                       placeholder="Palabras Clave de la revista"
                       type="text"
                     />
@@ -103,6 +112,7 @@
                       class="form-control"
                       id="themes"
                       name="themes"
+                      [(ngModel)]="magazine.themes"
                       placeholder="Temas de la revista"
                       type="text"
                     />
@@ -112,6 +122,7 @@
                       class="form-control"
                       id="copies"
                       name="copies"
+                      [(ngModel)]="magazine.copies"
                       placeholder="copias"
                       type="text"
                     />
@@ -121,6 +132,7 @@
                       class="form-control"
                       id="avaible"
                       name="avaible"
+                      [(ngModel)]="magazine.avaible"
                       placeholder="copias disponibles"
                       type="text"
                     />
@@ -130,6 +142,7 @@
                       class="form-control"
                       id="copies"
                       name="copies"
+                      [(ngModel)]="magazine.actualFrecuency"
                       placeholder="Frecuencia Actual"
                       type="text"
                     />
@@ -139,6 +152,7 @@
                       class="form-control"
                       id="avaible"
                       name="avaible"
+                      [(ngModel)]="magazine.published"
                       placeholder="publicadas"
                       type="text"
                     />
@@ -150,6 +164,7 @@
                       class="form-control"
                       id="description"
                       name="description"
+                      [(ngModel)]="magazine.description"
                       placeholder="descripcion"
                       rows="5"
                     ></textarea>

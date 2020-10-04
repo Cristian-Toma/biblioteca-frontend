@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BookModel } from 'src/app/models/book.model';
 import { AdminService } from 'src/app/services/admin/admin.service';
 
 type Book = {
@@ -18,16 +19,12 @@ export class ListBookComponent implements OnInit {
     this.getBooks();
   }
 
-  books = [
-    {
-      name: '',
-    },
-  ];
+  books: BookModel[] = [];
 
   getBooks() {
     if (this.rest.isAdminLogged()) {
-      this.rest.getBooks().subscribe((data: any) => {
-        data.map((book) => this.books.push(book));
+      this.rest.getBooks().subscribe((res: any) => {
+        res.data.map((book) => this.books.push(book));
       });
     } else {
       alert('Usuario No Autorizado');

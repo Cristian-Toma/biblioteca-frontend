@@ -11,11 +11,7 @@ import { AdminService } from 'src/app/services/admin/admin.service';
 export class LoginComponent implements OnInit {
   userLogin;
 
-  constructor(
-    private rest: UserService,
-    private rst: AdminService,
-    private router: Router
-  ) {
+  constructor(private rest: AdminService, private router: Router) {
     this.userLogin = {
       carnetCui: '',
       name: '',
@@ -36,8 +32,12 @@ export class LoginComponent implements OnInit {
           } else if (res.token) {
             alert('Bienvenido ' + this.userLogin.name);
             localStorage.setItem('token', res.token);
-            localStorage.setItem('user', res.user.role);
-            this.router.navigateByUrl('adminHome');
+            localStorage.setItem('user', res.user);
+            if (res.user === 'ADMIN') {
+              this.router.navigateByUrl('adminHome');
+            } else {
+              this.router.navigateByUrl('home');
+            }
           } else {
             alert('Ha ocurrido un error desconocido');
           }

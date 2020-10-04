@@ -2,20 +2,24 @@
   class="navbar navbar-expand-lg navbar-dark bg-dark"
   style="background-color: bl"
 >
-  <a class="navbar-brand" href="/adminHome">Biblioteca</a>
+  <a class="navbar-brand" routerLink="/adminHome">Biblioteca</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item" id="activo">
         <a
           class="nav-link"
           id="activo"
-          href="/userHome"
+          routerLink="/userHome"
           routerLinkActive="active"
           >Inicio</a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="btn" href="/saveUser" routerLinkActive="active"
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/saveUser"
+          routerLinkActive="active"
           >Guardar Usuarios</a
         >
       </li>
@@ -23,7 +27,7 @@
         <a
           class="nav-link"
           id="btn"
-          href="/updateUser"
+          routerLink="/updateUser"
           routerLinkActive="active"
           >Modificar Usuarios</a
         >
@@ -32,25 +36,29 @@
         <a
           class="nav-link"
           id="btn"
-          href="/deleteUser"
+          routerLink="/deleteUser"
           routerLinkActive="active"
           >Eliminar Usuarios</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="btn" href="/listUser" routerLinkActive="active"
-          >listar Usuarios</a
         >
       </li>
       <li class="nav-item">
         <a
           class="nav-link"
           id="btn"
-          href="/searchUser"
+          routerLink="/listUser"
+          routerLinkActive="active"
+          >listar Usuarios</a
+        >
+      </li>
+      <!--<li class="nav-item">
+        <a
+          class="nav-link"
+          id="btn"
+          routerLink="/searchUser"
           routerLinkActive="active"
           >Buscar Usuarios</a
         >
-      </li>
+      </li>-->
     </ul>
   </div>
 </nav>

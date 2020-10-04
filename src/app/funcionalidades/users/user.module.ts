@@ -9,7 +9,12 @@ import { RevistasUserHomeComponent } from './components/revistas/components/revi
 import { LibrosUserHomeComponent } from './components/libros/components/libros-user-home/libros-user-home.component';
 import { BuscarLibrosComponent } from './components/libros/components/buscar-libros/buscar-libros.component';
 import { BuscarRevistasComponent } from './components/revistas/components/buscar-revistas/buscar-revistas.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from 'src/app/shared/shared/shared.module';
+import { InicioRoutingModule } from '../inicio/inicio-routing.module';
+import { UserService } from 'src/app/services/user/user.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,15 @@ import { FormsModule } from '@angular/forms';
     BuscarLibrosComponent,
     BuscarRevistasComponent,
   ],
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    SharedModule,
+    InicioRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserModule,
+  ],
+  providers: [UserService],
 })
 export class UserModule {}
