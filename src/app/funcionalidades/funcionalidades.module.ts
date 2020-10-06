@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { InicioModule } from './inicio/inicio.module';
 import { FormsModule } from '@angular/forms';
-import { AdminModule } from './admin/admin.module';
+import { AdminModule } from './user-admin/user-admin.module';
 
 @NgModule({
   declarations: [],
