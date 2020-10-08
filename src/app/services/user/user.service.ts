@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class UserService {
-  endpoint = 'http://localhost:3800/user/';
+  endpoint = 'http://localhost:3800/user';
   httOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -20,33 +20,21 @@ export class UserService {
     let body = res;
     return body || [] || {};
   }
-  login(dataUser) {
-    let params = JSON.stringify(dataUser);
+  isUserLogged(): boolean {
+    return (
+      localStorage.getItem('token') && localStorage.getItem('user') === 'USER'
+    );
+  }
+
+  getMagazine() {
     return this.http
-      .post(this.endpoint + 'login', params, this.httOptions)
+      .get(`${this.endpoint}/listMagazine`, this.httOptions)
       .pipe(map(this.extractData));
   }
 
-  updateUser(dataUser) {
-    let params = JSON.stringify(dataUser);
-    let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: localStorage.getItem('token'),
-    });
+  getBooks() {
     return this.http
-      .put(this.endpoint + 'updateUser/' + dataUser._id, params, {
-        headers: headers,
-      })
-      .pipe(map(this.extractData));
-  }
-
-  deleteUser(id) {
-    let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: localStorage.getItem('token'),
-    });
-    return this.http
-      .delete(this.endpoint + 'removeUser/' + id, { headers: headers })
+      .get(`${this.endpoint}/listBook`, this.httOptions)
       .pipe(map(this.extractData));
   }
 }

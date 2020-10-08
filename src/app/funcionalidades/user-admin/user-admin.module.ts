@@ -36,6 +36,7 @@ import { BuscarRevistasComponent } from './users/components/revistas/components/
 import { DevolverRevistaComponent } from './users/components/revistas/components/devolver-revista/devolver-revista.component';
 import { PrestarRevistaComponent } from './users/components/revistas/components/prestar-revista/prestar-revista.component';
 import { RevistasUserHomeComponent } from './users/components/revistas/components/revistas-user-home/revistas-user-home.component';
+import { UserService } from 'src/app/services/user/user.service';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,7 @@ import { RevistasUserHomeComponent } from './users/components/revistas/component
     FormsModule,
     BrowserModule,
   ],
-  providers: [AdminService],
+  providers: [AdminService, UserService],
   exports: [],
 })
 export class AdminModule {}
